@@ -5,7 +5,7 @@ naturales utilizando un bucle for.
 '''
 
 suma = 0
-for i in range (1,101):
+for i in range(1, 101):
     suma = suma + i
 
-print (f"La suma es {suma}" )
+print(f"La suma es {suma}")

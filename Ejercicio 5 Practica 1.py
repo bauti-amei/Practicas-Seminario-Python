@@ -6,18 +6,18 @@ número negativo. Nota: utilice la sentencia break cuando haga falta.
 
 lista_numeros = []
 
-cant_elementos = int(input ("Ingrese la cantidad de numeros que trendra la lista"))
+cant_elementos = int(
+    input("Ingrese la cantidad de numeros que trendra la lista"))
 
 for i in range(cant_elementos):
-    nuevo_num = int (input ("Ingrese un numero"))
+    nuevo_num = int(input("Ingrese un numero"))
     lista_numeros.append(nuevo_num)
 
-print ("La lista de numeros es : ", end=" ")
+print("La lista de numeros es : ", end=" ")
 
-for i in range (cant_elementos):
-    if lista_numeros [i] < 0 :
-        print (" SE ENCONTRO UN NEGATIVO")
+for i in range(cant_elementos):
+    if lista_numeros[i] < 0:
+        print(" SE ENCONTRO UN NEGATIVO")
         break
     else:
-        print (lista_numeros[i], end=" - ")
-
+        print(lista_numeros[i], end=" - ")
