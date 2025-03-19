@@ -28,15 +28,13 @@ correct_answers_index = [1, 2, 0, 3, 1]
 
 puntaje = 0
 
-# El usuario deberá contestar 3 preguntas
-for _ in range(3):
-    # Se selecciona una pregunta aleatoria
-    question_index = random.randint(0, len(questions) - 1)
-
-    # Se muestra la pregunta y las respuestas posibles
-    print(questions[question_index])
-    for i, answer in enumerate(answers[question_index]):
-        print(f"{i + 1}. {answer}")
+# Creo una lista con 3 preguntas al azar con sus respectivas opciones y su respuesta correcta 
+questions_to_ask = random.choices (list(zip (questions, answers, correct_answers_index)), k=3)
+for preguntas, opciones, respuesta in questions_to_ask:
+    # Muestro la pregunta con sus opciones
+    print (preguntas)
+    for i, opcion in enumerate(opciones):
+      print (i+1, ".", opcion)
 
     # El usuario tiene 2 intentos para responder correctamente
     for intento in range(2):
@@ -48,7 +46,7 @@ for _ in range(3):
         # Se convierte la respuesta del usuario en el formato correcto
         user_answer = int(user_answer)-1
         # Se verifica si la respuesta es correcta
-        if user_answer == correct_answers_index[question_index]:
+        if user_answer == respuesta:
             print("¡Correcto!")
             puntaje += 1
             break
@@ -56,7 +54,7 @@ for _ in range(3):
         # Si el usuario no responde correctamente después de 2 intentos,
         # se muestra la respuesta correcta
         print("Incorrecto. La respuesta correcta es:")
-        print(answers[question_index][correct_answers_index[question_index]])
+        print(opciones[respuesta])
         puntaje -= 0.5
 
     # Se imprime un blanco al final de la pregunta
@@ -65,4 +63,4 @@ for _ in range(3):
 # Imprimo el puntaje, considerando cero como el puntaje mas bajo
 if puntaje < 0:
     puntaje = 0
-print ("Usted obtuvo un puntaje de : ", puntaje)
+print("Usted obtuvo un puntaje de : ", puntaje)
