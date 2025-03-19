@@ -51,12 +51,14 @@ for preguntas, opciones, respuesta in questions_to_ask:
             print("¡Correcto!")
             puntaje += 1
             break
+        # Si la respuesta no es correcta resto puntaje
+        else:
+            puntaje -= 0.5
     else:
         # Si el usuario no responde correctamente después de 2 intentos,
         # se muestra la respuesta correcta
         print("Incorrecto. La respuesta correcta es:")
         print(opciones[respuesta])
-        puntaje -= 0.5
 
     # Se imprime un blanco al final de la pregunta
     print()
