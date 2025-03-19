@@ -28,13 +28,14 @@ correct_answers_index = [1, 2, 0, 3, 1]
 
 puntaje = 0
 
-# Creo una lista con 3 preguntas al azar con sus respectivas opciones y su respuesta correcta 
-questions_to_ask = random.choices (list(zip (questions, answers, correct_answers_index)), k=3)
+# Creo una lista con 3 preguntas al azar con sus respectivas opciones y su respuesta correcta
+questions_to_ask = random.sample(
+    list(zip(questions, answers, correct_answers_index)), k=3)
 for preguntas, opciones, respuesta in questions_to_ask:
     # Muestro la pregunta con sus opciones
-    print (preguntas)
+    print(preguntas)
     for i, opcion in enumerate(opciones):
-      print (i+1, ".", opcion)
+        print(i+1, ".", opcion)
 
     # El usuario tiene 2 intentos para responder correctamente
     for intento in range(2):
