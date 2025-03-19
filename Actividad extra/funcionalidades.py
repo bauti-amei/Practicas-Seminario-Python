@@ -45,5 +45,5 @@ def mostrar_inventario(inventario):
     else:
         print("--- Inventario actual ---")
         for nombreProducto, cantidad in inventario.items():
-            print(f" - Producto: {nombreProducto} - Cantidad : {cantidad}")
+            print(f"Producto: {nombreProducto} - Cantidad : {cantidad}")
     print ()
