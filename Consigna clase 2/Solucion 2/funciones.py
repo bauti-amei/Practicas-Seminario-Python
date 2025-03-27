@@ -1,4 +1,5 @@
 
+
 def cargar_lista(movies_duration):
     '''Recibe una lista por parametro y carga los valores ingresados por teclado'''
     minutes = int(
@@ -28,7 +29,11 @@ def cant_superan_promedio(movies_duration):
     return cant
 
 
+<<<<<<< HEAD
 if __name__== "__main__": 
+=======
+if __name__== "__main__":
+>>>>>>> 37310a7c58576ea9300186fb8c40888ef4ace168
     # Cargo lista por teclado con las duraciones de las peliculas
     movies_duration = []
     cargar_lista(movies_duration)
